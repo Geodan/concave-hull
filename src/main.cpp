@@ -9,9 +9,10 @@
 #include <cassert>
 #include <unordered_map>
 #include <cstdint>
+#include <float.h>
 
 #pragma warning(push, 0)
-#include <flann\flann.hpp>
+#include <flann/flann.hpp>
 #pragma warning(pop)
 
 #define USE_OPENMP
