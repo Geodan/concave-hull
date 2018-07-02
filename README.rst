@@ -13,15 +13,10 @@ Installation
 FLANN
 -----
 
+Windows
+^^^^^^^
+
 Download FLANN 1.8 from here_ and build using a C++ compiler. Set the FLANN directory in the environment variables under the variable name FLANN_DIR.
-
-On Linux systems:
-
-.. code-block::
-
-    export FLANN_DIR=path/to/flann/dir
-
-On Windows:
 
 .. code-block::
 
@@ -29,7 +24,33 @@ On Windows:
 
 Or set the environment variables via the control panel.
 
+Ubuntu
+^^^^^^
+
+Install FLANN using apt:
+
+.. code-block::
+
+    sudo apt install libflann-dev
+
+Or download the source_ and build.
+
+.. code-block::
+
+    mkdir build
+    cd build
+    cmake ..
+    make
+    make install
+
+Set the environment variable.
+
+.. code-block::
+
+    export FLANN_DIR=/usr/include
+
 .. _here: https://www.cs.ubc.ca/research/flann/
+.. _source: https://github.com/mariusmuja/flann
 
 Concave Hull
 ------------
@@ -41,6 +62,16 @@ With the FLANN_DIR variable set run the setup.py file using pip, by running the 
 
 Usage
 =====
+
+In python import the module and use the compute method to compute a concave hull.
+
+.. code-block::python
+
+    import numpy as np
+    import concave_hull
+
+    point = np.random(20, 2)
+    hull = concave_hull.compute(points, 3)
 
 Python doc
 ==========
