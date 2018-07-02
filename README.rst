@@ -65,12 +65,12 @@ Usage
 
 In python import the module and use the compute method to compute a concave hull.
 
-.. code-block::python
+.. code-block:: python
 
     import numpy as np
     import concave_hull
 
-    point = np.random(20, 2)
+    points = np.random.rand(20, 2)
     hull = concave_hull.compute(points, 3)
 
 Python doc
